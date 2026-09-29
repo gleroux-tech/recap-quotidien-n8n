@@ -1,0 +1,1677 @@
+{
+  "id": "SN63F1lKlUlH6eKj",
+  "name": "Récap quotidien · Architecture (squelette)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "id": "ed38e18a-83ce-4500-abd7-b73bc28e16af",
+      "name": "Schedule - Chaque matin 7h30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "ff8714bd-54f3-4ef0-b72f-da4948d98596",
+      "name": "Data Table - Lire dernier passage",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "0bf86146-c61b-4224-8a22-a05764de2aaf",
+      "name": "Data Table - Lire mails en attente",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        448,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "857eaba9-ea72-4588-a7f1-92ae7afe7cd3",
+      "name": "Data Table - Lire exemples pas importants",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        672,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "additionalFields": {}
+      },
+      "id": "50e1ec8d-4e7e-4ebc-bd2d-c8e70082a1b7",
+      "name": "Google Agenda - Lire RDV perso",
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        880,
+        0
+      ],
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "cGElikHXpYCzqttR",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "additionalFields": {}
+      },
+      "id": "d218c9d8-8a00-4c49-9501-c07163c12515",
+      "name": "Google Agenda - Lire RDV ecole",
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        1104,
+        0
+      ],
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "cGElikHXpYCzqttR",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "additionalFields": {}
+      },
+      "id": "dc74f19d-f7dd-419d-9b80-e479b6ff5e1b",
+      "name": "Google Agenda - Lire RDV pro",
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        1328,
+        0
+      ],
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "cGElikHXpYCzqttR",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "042b5674-c9aa-4caf-bce8-a7e132c32aa4",
+      "name": "Gmail - Lire reçus perso",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1552,
+        0
+      ],
+      "webhookId": "68399bd8-3141-4567-b6c1-44cee4a2e5ff",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "PUXNIh3q49kGvFKu",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "a0024696-c853-4eb6-a207-b4e4c6060016",
+      "name": "Gmail - Lire envoyés perso",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1760,
+        0
+      ],
+      "webhookId": "0dec02ed-187c-4ba2-8f1e-79030322281b",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "PUXNIh3q49kGvFKu",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "624553f2-f20d-4987-9694-67bd92d9ff85",
+      "name": "Gmail - Lire reçus ecole",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1984,
+        0
+      ],
+      "webhookId": "8b52e5bb-d857-4446-85dd-2de179ac8dcf",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "PUXNIh3q49kGvFKu",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "4a7f32d7-882c-479f-8934-5b319f04b3a9",
+      "name": "Gmail - Lire envoyés ecole",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        2208,
+        0
+      ],
+      "webhookId": "e74334e8-6276-4917-a50c-e024333dea11",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "PUXNIh3q49kGvFKu",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "515ad8c6-8356-40e9-b122-de4e74879247",
+      "name": "Gmail - Lire reçus pro",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        2432,
+        0
+      ],
+      "webhookId": "450fa868-5ad6-4c55-8a58-2063a57afe20",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "PUXNIh3q49kGvFKu",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "36796969-d2fa-4275-8d1e-ba6a8ff53489",
+      "name": "Gmail - Lire envoyés pro",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        2640,
+        0
+      ],
+      "webhookId": "23785b3a-2b66-4f4a-9656-72e438b1ba82",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "PUXNIh3q49kGvFKu",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "7ebfcbc8-eff8-46fe-9ada-b7b884169147",
+      "name": "Code - Préparer RDV, conflits et mails",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2864,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "messages": {
+          "values": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "c603e394-d451-498c-9440-2e9779d7fff8",
+      "name": "Claude - Trier mails à répondre",
+      "type": "@n8n/n8n-nodes-langchain.anthropic",
+      "typeVersion": 1,
+      "position": [
+        3088,
+        0
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "8e6e3904-5678-409e-9bd1-ed453deade77",
+      "name": "Code - Construire texte du récap",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3312,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "@recap_gaspard_bot",
+        "additionalFields": {}
+      },
+      "id": "2bd69f24-1326-464f-89e9-680745794b01",
+      "name": "Telegram - Envoyer récap",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        3520,
+        0
+      ],
+      "webhookId": "3c4c19fc-d844-4fd2-bb42-eda153fdf582",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "892855b7-5e07-4337-bfb7-6e516bc229da",
+      "name": "Data Table - Enregistrer passage",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        3744,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "13525b50-e73c-43c9-9604-df82c08f3aad",
+      "name": "Data Table - Vider liste d’attente",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        3968,
+        -144
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "5f11bd42-c79a-46d7-b28d-8f514f78aaef",
+      "name": "Set - Extraire mails en attente",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        4192,
+        -144
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "c6e199dc-5a8d-4e11-84cd-8febc5b10f29",
+      "name": "Split Out - Un mail par ligne",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        4400,
+        -144
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "df1e87e4-dc93-4ddc-9f71-254d2e793414",
+      "name": "Data Table - Enregistrer mails en attente",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        4624,
+        -144
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "88a78bb6-fafa-41d2-b4cb-2e9beee0d23d",
+      "name": "Set - Extraire boutons",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        3968,
+        144
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "2a3fc065-03a7-4ef0-a4a3-9db3490430a8",
+      "name": "Split Out - Un bouton par message",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        4192,
+        144
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "@recap_gaspard_bot",
+        "additionalFields": {}
+      },
+      "id": "71fc9e82-48e8-4830-b819-5378d70e4c8a",
+      "name": "Telegram - Envoyer message à bouton",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        4400,
+        144
+      ],
+      "webhookId": "8804ad83-4d0a-494e-b59f-3ddcd774463d",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "5ec73924-4c8c-47bc-976e-1a2be117bdda",
+      "name": "Data Table - Enregistrer boutons",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        4624,
+        144
+      ]
+    },
+    {
+      "parameters": {
+        "updates": [
+          "callback_query"
+        ],
+        "additionalFields": {}
+      },
+      "id": "a0c6bf4c-60f5-43b7-8003-2f0803e1ef33",
+      "name": "Telegram Trigger - Clic sur bouton",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        0,
+        704
+      ],
+      "webhookId": "de51e63f-40d3-4311-9282-80ee335637df",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "c175a238-7106-4233-9fce-c0924e718be0",
+      "name": "Set - Lire clic",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        224,
+        704
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "814d8ab5-47f4-4631-94b6-901f14b4739e",
+      "name": "Data Table - Retrouver bouton cliqué",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        448,
+        704
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "7b4336cc-9ad5-4e6e-913c-df08c3bb03fb",
+      "name": "Set - Préparer contexte du clic",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        672,
+        704
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "expression",
+        "numberOutputs": 3
+      },
+      "id": "45214465-99be-4e44-a0c5-957443dfaa9c",
+      "name": "Switch - Type d’action",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        880,
+        704
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "5a93365f-a9c3-490f-be70-3fece2b6abcf",
+      "name": "Set - Préparer changement de réponse",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        1104,
+        512
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "expression",
+        "numberOutputs": 3
+      },
+      "id": "3da5c385-43e9-4531-93aa-e8c84f5e51b7",
+      "name": "Switch - Quel compte",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        1328,
+        512
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "5ef8902a-5e78-4ef0-8946-4cd041bc9640",
+      "name": "HTTP - Lire événement perso",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1552,
+        352
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "41cf7047-ea4a-4ba4-9552-5e1070a3d61f",
+      "name": "HTTP - Modifier ma réponse perso",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1760,
+        352
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "eb103c41-ca1e-436b-9537-da964dc60f13",
+      "name": "Data Table - Mettre à jour bouton RDV",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1984,
+        512
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "@recap_gaspard_bot",
+        "additionalFields": {}
+      },
+      "id": "e3b52cd9-0484-4382-a802-6d787b32ea38",
+      "name": "Telegram - Modifier message RDV",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2208,
+        512
+      ],
+      "webhookId": "ac8eb1d7-e982-4b09-8be5-f4f3ac72d9ec",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "@recap_gaspard_bot",
+        "additionalFields": {}
+      },
+      "id": "a7e34cf2-b181-46ea-a46f-894ad62ee8b1",
+      "name": "Telegram - Confirmer clic RDV",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2432,
+        512
+      ],
+      "webhookId": "a3a66ce8-d2d5-421d-840f-d63704501787",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "b6c90ba9-6b0c-4031-8153-470f6c2bf636",
+      "name": "HTTP - Lire événement ecole",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1552,
+        512
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "b1850880-1815-49d3-b345-61abf3136d90",
+      "name": "HTTP - Modifier ma réponse ecole",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1760,
+        512
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "aa96b8cd-debd-465f-8db9-c8aca4896ca5",
+      "name": "HTTP - Lire événement pro",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1552,
+        672
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "ebb6ac73-51fb-4866-8156-097a441227a5",
+      "name": "HTTP - Modifier ma réponse pro",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        1760,
+        672
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "fdeb4006-3c7a-4140-a27a-c9ac87ceb1a6",
+      "name": "Set - Préparer mail pas important",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        1104,
+        864
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "daf46a96-0d5a-4255-8af6-c4dc75be36ef",
+      "name": "Data Table - Ajouter exemple pas important",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1328,
+        864
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "9229cfed-f1e1-4c71-9477-4638ef84b5f5",
+      "name": "Data Table - Retirer mail de la liste d’attente",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1552,
+        864
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "66047ed6-3b79-44e5-b0cb-ec66c8cc6067",
+      "name": "Data Table - Marquer bouton traité",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1760,
+        864
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "@recap_gaspard_bot",
+        "additionalFields": {}
+      },
+      "id": "60181f23-c423-477d-8a74-724b4b36d02a",
+      "name": "Telegram - Modifier message mail",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1984,
+        864
+      ],
+      "webhookId": "f76fc1d2-fea3-4ed5-95ee-6e39aa4b4c08",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "@recap_gaspard_bot",
+        "additionalFields": {}
+      },
+      "id": "7d2283fa-957f-402d-9d61-a212298e110d",
+      "name": "Telegram - Confirmer clic mail",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2208,
+        864
+      ],
+      "webhookId": "2e5b9136-eca2-4806-9d9e-22df072ae129",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "@recap_gaspard_bot",
+        "additionalFields": {}
+      },
+      "id": "30013e21-4ad2-4a48-bb2f-3347385d1202",
+      "name": "Telegram - Répondre clic refusé",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1104,
+        1040
+      ],
+      "webhookId": "8b15d064-84d8-4d17-8a0f-7804d7b5b52c",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "@recap_gaspard_bot",
+        "additionalFields": {}
+      },
+      "id": "8d66c49b-83b9-46f4-bef4-6af276673566",
+      "name": "Telegram - Signaler échec agenda",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1984,
+        304
+      ],
+      "webhookId": "9c2cfca8-3d47-4ce4-b13e-46ef3764a23c",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "id": "99ee449e-edd3-4211-ae0b-13f7e9082677",
+      "name": "Schedule - Chaque matin 7h45",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        1312
+      ]
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "id": "ca90c119-885e-4488-8281-158c6b0d017f",
+      "name": "Data Table - Chercher récap du jour",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        1312
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "0a51cb2a-6b63-40c0-98cb-6ff37b343d11",
+      "name": "IF - Récap absent ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        448,
+        1312
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "d4cf6522-5f8f-4310-8366-db263ede6d20",
+      "name": "Set - Alerte récap manquant",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        672,
+        1312
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "@recap_gaspard_bot",
+        "additionalFields": {}
+      },
+      "id": "6b13935c-6d6b-4900-a5dd-aa96624222cd",
+      "name": "Telegram - Envoyer alerte",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        880,
+        1408
+      ],
+      "webhookId": "2ee23462-ebd5-4d8d-917f-10a816b510db",
+      "onError": "continueErrorOutput",
+      "credentials": {
+        "telegramApi": {
+          "id": "4s7dJVypuGIruu4e",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "105b38ef-c8e7-4194-bcab-551299e96760",
+      "name": "Error Trigger - Échec d’un workflow récap",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1504
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "51b8fa81-0f19-4b3e-8be3-6dbc93314269",
+      "name": "Set - Alerte échec",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        672,
+        1504
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "d210a560-b8c4-4658-9d52-71d19e0881b5",
+      "name": "Gmail - Envoyer alerte de secours",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1104,
+        1504
+      ],
+      "webhookId": "ce2c2050-5ed9-4777-8978-030857bbff53",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "PUXNIh3q49kGvFKu",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## 1. Récap matinal",
+        "color": 4
+      },
+      "id": "05c6b15f-0dfe-4921-80a6-ef72cc8be8bf",
+      "name": "Sticky Note 01dcb75c",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        112,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 2. Actions sur les boutons",
+        "color": 5
+      },
+      "id": "66517ced-bf5f-4c49-adb4-54b1ef7288b1",
+      "name": "Sticky Note 2d1ba24a",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        112,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 3. Signal de vie",
+        "color": 3
+      },
+      "id": "89fbe6f0-99ef-472b-9fc1-168e3ad31e7e",
+      "name": "Sticky Note 6b9b3871",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        112,
+        816
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule - Chaque matin 7h30": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Lire dernier passage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Lire dernier passage": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Lire mails en attente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Lire mails en attente": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Lire exemples pas importants",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Lire exemples pas importants": {
+      "main": [
+        [
+          {
+            "node": "Google Agenda - Lire RDV perso",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Agenda - Lire RDV perso": {
+      "main": [
+        [
+          {
+            "node": "Google Agenda - Lire RDV ecole",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Agenda - Lire RDV ecole": {
+      "main": [
+        [
+          {
+            "node": "Google Agenda - Lire RDV pro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Agenda - Lire RDV pro": {
+      "main": [
+        [
+          {
+            "node": "Gmail - Lire reçus perso",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail - Lire reçus perso": {
+      "main": [
+        [
+          {
+            "node": "Gmail - Lire envoyés perso",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail - Lire envoyés perso": {
+      "main": [
+        [
+          {
+            "node": "Gmail - Lire reçus ecole",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail - Lire reçus ecole": {
+      "main": [
+        [
+          {
+            "node": "Gmail - Lire envoyés ecole",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail - Lire envoyés ecole": {
+      "main": [
+        [
+          {
+            "node": "Gmail - Lire reçus pro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail - Lire reçus pro": {
+      "main": [
+        [
+          {
+            "node": "Gmail - Lire envoyés pro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail - Lire envoyés pro": {
+      "main": [
+        [
+          {
+            "node": "Code - Préparer RDV, conflits et mails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code - Préparer RDV, conflits et mails": {
+      "main": [
+        [
+          {
+            "node": "Claude - Trier mails à répondre",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude - Trier mails à répondre": {
+      "main": [
+        [
+          {
+            "node": "Code - Construire texte du récap",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code - Construire texte du récap": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Envoyer récap",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram - Envoyer récap": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Enregistrer passage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Enregistrer passage": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Vider liste d’attente",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set - Extraire boutons",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Vider liste d’attente": {
+      "main": [
+        [
+          {
+            "node": "Set - Extraire mails en attente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Extraire mails en attente": {
+      "main": [
+        [
+          {
+            "node": "Split Out - Un mail par ligne",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out - Un mail par ligne": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Enregistrer mails en attente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Extraire boutons": {
+      "main": [
+        [
+          {
+            "node": "Split Out - Un bouton par message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out - Un bouton par message": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Envoyer message à bouton",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram - Envoyer message à bouton": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Enregistrer boutons",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger - Clic sur bouton": {
+      "main": [
+        [
+          {
+            "node": "Set - Lire clic",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Lire clic": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Retrouver bouton cliqué",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Retrouver bouton cliqué": {
+      "main": [
+        [
+          {
+            "node": "Set - Préparer contexte du clic",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Préparer contexte du clic": {
+      "main": [
+        [
+          {
+            "node": "Switch - Type d’action",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch - Type d’action": {
+      "main": [
+        [
+          {
+            "node": "Set - Préparer changement de réponse",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Set - Préparer mail pas important",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Telegram - Répondre clic refusé",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Préparer changement de réponse": {
+      "main": [
+        [
+          {
+            "node": "Switch - Quel compte",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch - Quel compte": {
+      "main": [
+        [
+          {
+            "node": "HTTP - Lire événement perso",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP - Lire événement ecole",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP - Lire événement pro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP - Lire événement perso": {
+      "main": [
+        [
+          {
+            "node": "HTTP - Modifier ma réponse perso",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP - Modifier ma réponse perso": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Mettre à jour bouton RDV",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Telegram - Signaler échec agenda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Mettre à jour bouton RDV": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Modifier message RDV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram - Modifier message RDV": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Confirmer clic RDV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP - Lire événement ecole": {
+      "main": [
+        [
+          {
+            "node": "HTTP - Modifier ma réponse ecole",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP - Modifier ma réponse ecole": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Mettre à jour bouton RDV",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Telegram - Signaler échec agenda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP - Lire événement pro": {
+      "main": [
+        [
+          {
+            "node": "HTTP - Modifier ma réponse pro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP - Modifier ma réponse pro": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Mettre à jour bouton RDV",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Telegram - Signaler échec agenda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Préparer mail pas important": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Ajouter exemple pas important",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Ajouter exemple pas important": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Retirer mail de la liste d’attente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Retirer mail de la liste d’attente": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Marquer bouton traité",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Marquer bouton traité": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Modifier message mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram - Modifier message mail": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Confirmer clic mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule - Chaque matin 7h45": {
+      "main": [
+        [
+          {
+            "node": "Data Table - Chercher récap du jour",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Table - Chercher récap du jour": {
+      "main": [
+        [
+          {
+            "node": "IF - Récap absent ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF - Récap absent ?": {
+      "main": [
+        [
+          {
+            "node": "Set - Alerte récap manquant",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Alerte récap manquant": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Envoyer alerte",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram - Envoyer alerte": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Gmail - Envoyer alerte de secours",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Error Trigger - Échec d’un workflow récap": {
+      "main": [
+        [
+          {
+            "node": "Set - Alerte échec",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Alerte échec": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Envoyer alerte",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": true,
+    "binaryMode": "separate"
+  },
+  "pinData": {},
+  "meta": {
+    "aiBuilderAssisted": true,
+    "builderVariant": "mcp"
+  }
+}

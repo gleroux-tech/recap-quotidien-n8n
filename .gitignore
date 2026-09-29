@@ -1,0 +1,6 @@
+.env
+.env.*
+n8n-cli.json
+.n8n-cli/
+node_modules/
+.DS_Store
