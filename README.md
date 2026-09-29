@@ -18,7 +18,7 @@ Les fichiers `.workflow.ts` sont au format du [n8n Workflow SDK](https://www.npm
 ```
 workflows/   code TypeScript (SDK n8n)
 json/        exports JSON importables
-docs/spec.md spec : objectifs, affirmations A1–A27, architecture, décisions
+SPEC.md      spec : objectifs, affirmations A1–A27, architecture, décisions
 ```
 
 ## Architecture
