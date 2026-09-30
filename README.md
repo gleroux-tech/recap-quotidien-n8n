@@ -19,6 +19,7 @@ Les fichiers `.workflow.ts` sont au format du [n8n Workflow SDK](https://www.npm
 workflows/   code TypeScript (SDK n8n)
 json/        exports JSON importables
 SPEC.md      spec : objectifs, affirmations A1–A27, architecture, décisions
+skills/      méthode : interview, hostile-interview, doubt-driven-dev
 ```
 
 ## Architecture
@@ -62,3 +63,13 @@ Clic  Telegram Trigger → Data Table → Switch (Décliner / Annuler / Pas impo
 ## Sécurité
 
 Aucun token ni clé d'API dans ce dépôt : les nœuds référencent des credentials n8n par leur identifiant. Le dépôt contient en revanche des données personnelles (adresses mail, chat_id Telegram), il doit rester privé.
+
+## Méthode (skills)
+
+Le dossier `skills/` contient les trois skills utilisés pour cadrer, challenger et construire ce projet :
+
+| Skill | Rôle |
+|---|---|
+| `interview` | Cadrer le besoin : une question à la fois, avec une réponse recommandée |
+| `hostile-interview` | Attaquer le spec : trous, hypothèses cachées, modes de panne, sécurité, coût |
+| `doubt-driven-dev` | Construire en levant chaque doute par une preuve réelle avant de s'appuyer dessus |
